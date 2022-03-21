@@ -1,0 +1,141 @@
+:root {
+    --main-color: #7ed56f;
+    --secnod-color: #28b485;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: #777;
+}
+
+header {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 131, 0.8)), url(../img/hero-small.jpg);
+    background-position: top;
+    background-size: cover;
+    height: 95vh;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+header .icon_header {
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+header .icon_header .logo {
+    width: 70px;
+    cursor: pointer;
+}
+
+.heading-primary {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+}
+
+header .heading-primary .heading-primary-h2 {
+    font-size: 70px;
+    font-weight: normal;
+    letter-spacing: 20px;
+    animation: moveToRight 1s ease-in-out;
+}
+
+@keyframes moveToRight {
+    0% {
+        transform: translateX(-150px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header .heading-primary .heading-primary-p {
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    margin-bottom: 60px;
+    animation: moveToLeft 1s ease-out;
+}
+
+@keyframes moveToLeft {
+    0% {
+        transform: translateX(150px);
+        transform: translateY(15deg);
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+header .heading-primary .btn-1 {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #777;
+    position: relative;
+    background-color: #fff;
+    padding: 20px 30px;
+    font-weight: normal;
+    border-radius: 30px;
+    display: inline-block;
+    animation: moveToBottom 1s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveToBottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+header .heading-primary .btn-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+header .heading-primary .btn-1:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+header .heading-primary .btn-1::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+header .heading-primary .btn-1:hover::after {
+    transform: scaleX(1.5) scaleY(1.8);
+    opacity: 0;
+}
